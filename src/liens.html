@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>cw4 . révision transition et pseudo - Les liens</title>
+
+        <link rel="stylesheet" href="styles/main.css" />
+        <script src="scripts/main.js" defer></script>
+    </head>
+
+    <body>
+        <section class="exercice">
+            <div class="wrapper">
+                <h1>ex1. Les liens animés</h1>
+                <p>
+                    Jusqu'à présent, nous avons fait des animations de survol très traditionnelles. Dans l'exercice suivant, nous allons essayer de faire des
+                    animations un peu plus avancées.
+                </p>
+
+                <section class="number" id="num1">
+                    <div class="number__header">
+                        <h2>
+                            numéro 1 -
+                            <span>Effet de survol #1</span>
+                        </h2>
+                        <p>L'objectif est de faire un effet de survol qui fait apparaitre une ligne sous le lien.</p>
+                        <h3>Instructions</h3>
+                        <div class="instructions">
+                            <a href="#num01-maquette" class="button--instruction">résultat final</a>
+                            <a href="#num01-explication" class="button--instruction">fiche technique</a>
+                        </div>
+                    </div>
+                    <div class="number__content">{% include "_partials/ex1/_num1.html" %}</div>
+                </section>
+                <section class="number" id="num2">
+                    <div class="number__header">
+                        <h2>
+                            numéro 2 -
+                            <span>Effet de survol #2</span>
+                        </h2>
+                        <p>L'objectif est de faire un effet de survol qui fait apparaitre un background derrière le lien.</p>
+                        <h3>Instructions</h3>
+                        <div class="instructions">
+                            <a href="#num02-maquette" class="button--instruction">résultat final</a>
+                            <a href="#num02-explication" class="button--instruction">fiche technique</a>
+                        </div>
+                    </div>
+                    <div class="number__content">{% include "_partials/ex1/_num2.html" %}</div>
+                </section>
+                <section class="number" id="num3">
+                    <div class="number__header">
+                        <h2>numéro 3 - effet de survol #3 [Défi supplémentaire optionnel]</h2>
+                        <p>L'objectif est de modifier l'effet de survol qui fait apparaitre la ligne pour un effet différent.</p>
+                        <h3>Instructions</h3>
+                        <div class="instructions">
+                            <a href="#num03-maquette" class="button--instruction">résultat final</a>
+                            <a href="#num03-explication" class="button--instruction">fiche technique</a>
+                        </div>
+                    </div>
+                    <div class="number__content">{% include "_partials/ex1/_num3.html" %}</div>
+                </section>
+                <section class="number" id="num4">
+                    <div class="number__header">
+                        <h2>numéro 4 - effet de survol #4 [Défi supplémentaire optionnel]</h2>
+                        <p>L'objectif est de modifier l'effet de survol qui fait apparaitre la ligne pour un effet différent.</p>
+                        <h3>Instructions</h3>
+                        <div class="instructions">
+                            <a href="#num04-maquette" class="button--instruction">résultat final</a>
+                            <a href="#num04-explication" class="button--instruction">fiche technique</a>
+                        </div>
+                    </div>
+                    <div class="number__content">{% include "_partials/ex1/_num4.html" %}</div>
+                </section>
+            </div>
+        </section>
+        {% include "_partials/dialog/_liens.html" %}
+    </body>
+</html>

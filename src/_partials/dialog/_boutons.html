@@ -1,0 +1,58 @@
+<dialog id="num01-maquette">
+    <a href="#num01" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>Résultat final</h3>
+        <img src="assets/images/ex2/num1.gif" alt="" />
+        <p class="close">Cliquez à l'extérieur pour fermer la fenêtre</p>
+    </div>
+</dialog>
+
+<dialog id="num01-explication">
+    <a href="#num01" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>HTML</h3>
+        <p>
+            La structure HTML est déjà fournie. Veuillez prendre le temps de regarder et d'analyser le fichier
+            <strong>partials/ex2/_num1.html.</strong>
+        </p>
+        <h3>Configuration de base sur .button-anim</h3>
+        <ul>
+            <li>Ajouter une bordure verte de 2px</li>
+            <li>Ajuster le padding pour 20px à gauche et à droite et 5px en haut et en bas</li>
+        </ul>
+        <h3>État de survol</h3>
+        <p>
+            Avant d'aller trop loin dans l'effet de survol qu'on veut créer. Nous allons faire l'état de survol sans avoir à faire le survol avec la souris. Une
+            fois qu'on sera satisfait on l'ajoutera à l'
+            <em>hover</em>
+            de notre bouton
+        </p>
+        <ul>
+            <li>Répéter les étapes du link-item-bg de l'exercice 1 pour ajouter une masse --color-bg-secondary derrière votre texte</li>
+        </ul>
+
+        <h3>État caché</h3>
+        <p>
+            Nous avons créer l'état de survol, nous allons maintenant caché l'effet pour la faire apparaitre lors du survol. Pour cet effet, nous allons
+            descendre encore plus bas notre ligne.
+        </p>
+        <h4>Translation vers la gauche</h4>
+        <ul>
+            <li>Faire une transformation pour déplacer sur l'axes des X de toute la longueur et un skew de 45deg</li>
+        </ul>
+        <p>
+            ⚠️ Si vous avez faite une translation de -100%, vous verrez qu'on voit encore une coin de la masse blanche. Vous pouvez augmenter le pourcentage
+            pour la faire disparaitre complètement
+        </p>
+        <p>
+            Il faut cacher la masse. Vous pouvez utiliser la boite de votre .button-anim comme masque. Vous pouvez mettre un overflow: hidden; qui chachera tout
+            ce qui est a l'extérieur de la boite.
+        </p>
+        <p>Ajouter aussi le bon display pour pouvoir profiter du modèle de boite qu'un élément inline ne permet pas.</p>
+        <h3>Effet survol</h3>
+        <ul>
+            <li>Ajouter sur le "hover" la transformation inverse pour faire apparaitre la ligne</li>
+            <li>Ajouter une animation de .3s avec un ease-out seulement sur le transform</li>
+        </ul>
+    </div>
+</dialog>

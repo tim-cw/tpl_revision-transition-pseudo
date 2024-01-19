@@ -1,0 +1,216 @@
+/* ==========================================================================
+   exercice / Components
+   ===================== NE PAS MODIFIER LES STYLES ICI =====================
+   ========================================================================== */
+.exercice {
+    padding: 75px 0;
+}
+.exercice,
+dialog {
+    font-family: 'Montserrat', sans-serif;
+    font-size: #{typo(16px, 20px)};
+
+    .wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    .number__header {
+        margin: 50px 0;
+        border-top: 2px var(--color-bg-primary) solid;
+        border-bottom: 2px var(--color-bg-primary) solid;
+        padding: 50px 0;
+        h1 {
+            font-size: #{typo(34px, 48px)};
+            margin: 0;
+        }
+        h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+        p {
+            margin-top: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 8px;
+                height: 8px;
+                background: var(--color-primary);
+                transform: rotate(-45deg);
+                transition: transform 0.3s ease-out;
+            }
+        }
+        a:not(.button--instruction) {
+            color: var(--color-primary);
+            text-decoration: none;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+.instructions {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.button--instruction {
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border: 3px var(--color-primary) solid;
+    &:hover {
+        background: var(--color-primary);
+        color: white;
+        text-decoration: none;
+    }
+}
+dialog[open],
+dialog:target {
+    background: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .dialog__close {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 0;
+        display: block;
+        cursor: default;
+    }
+    .dialog__content {
+        max-width: 70%;
+        max-height: 60vh;
+        overflow-y: auto;
+        background: white;
+        color: black;
+        padding: 30px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+        z-index: 2;
+        h3 {
+            margin-top: 30px;
+            font-size: 1.25rem;
+        }
+        h4 {
+            margin-bottom: 0;
+            color: var(--color-primary);
+        }
+        video {
+            width: 100%;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style: none;
+            display: grid;
+            gap: 20px;
+            ul {
+                margin-left: 20px;
+            }
+            li {
+                padding-left: 15px;
+                position: relative;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 5px;
+                    height: 5px;
+                    background: var(--color-primary);
+                    transform: rotate(-45deg);
+                    transition: transform 0.3s ease-out;
+                    position: absolute;
+                    left: 0;
+                    top: 14px;
+                }
+            }
+            &.short {
+                gap: 5px;
+            }
+        }
+        li,
+        p {
+            font-size: 1.25rem;
+            margin: 0;
+        }
+        ol {
+            margin: 0;
+            padding-left: 20px;
+            display: grid;
+            gap: 15px;
+            counter-reset: my-count;
+            list-style-type: none;
+            ul {
+                margin-top: 10px;
+                margin-left: 20px;
+            }
+            > li {
+                counter-increment: my-count;
+                &:before {
+                    content: counter(my-count) ' - ';
+                    margin-right: 5px;
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+    hr {
+        border: none;
+        border-bottom: 2px solid var(--color-bg-primary);
+        display: block;
+        width: 100%;
+    }
+    .close {
+        font-size: 0.8rem;
+        font-style: italic;
+    }
+    h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+.box {
+    width: 100%;
+    border: 3px var(--color-primary) solid;
+    aspect-ratio: 16 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
+    h2 {
+        color: var(--color-primary);
+    }
+    h2.active {
+        color: teal;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>cw4 . révision transition et pseudo - Les boutons</title>
+
+        <link rel="stylesheet" href="styles/main.css" />
+        <script src="scripts/main.js" defer></script>
+    </head>
+
+    <body>
+        <section class="exercice">
+            <div class="wrapper">
+                <h1>ex2. Des boutons animés</h1>
+                <p>
+                    Jusqu'à présent, nous avons fait des animations de survol très traditionnelles sur nos boutons. Dans l'exercice suivant, nous allons essayer
+                    de faire des animations un peu plus avancées.
+                </p>
+
+                <section class="number" id="num1">
+                    <div class="number__header">
+                        <h2>
+                            numéro 1 -
+                            <span>Effet de survol #1</span>
+                        </h2>
+                        <p>L'objectif est de faire un effet de survol qui fait apparaitre un arrière plan de droite à gauche derrière le texte du bouton.</p>
+                        <h3>Instructions</h3>
+                        <div class="instructions">
+                            <a href="#num01-maquette" class="button--instruction">résultat final</a>
+                            <a href="#num01-explication" class="button--instruction">fiche technique</a>
+                        </div>
+                    </div>
+                    <div class="number__content">{% include "_partials/ex2/_num1.html" %}</div>
+                </section>
+                <section class="number" id="num2">
+                    <div class="number__header">
+                        <h2>
+                            numéro 2 -
+                            <span>Effet de survol #2 [Défi supplémentaire optionnel]</span>
+                        </h2>
+                        <p>L'objectif est d'essayer de faire une animation supplémentaire.</p>
+                    </div>
+                    <div class="number__content">{% include "_partials/ex2/_num2.html" %}</div>
+                </section>
+            </div>
+        </section>
+        {% include "_partials/dialog/_boutons.html" %}
+    </body>
+</html>

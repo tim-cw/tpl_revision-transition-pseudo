@@ -1,0 +1,216 @@
+<dialog id="num01-maquette">
+    <a href="#num01" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>Résultat final</h3>
+        <img src="assets/images/ex1/num1.gif" alt="" />
+        <p class="close">Cliquez à l'extérieur pour fermer la fenêtre</p>
+    </div>
+</dialog>
+<dialog id="num02-maquette">
+    <a href="#num02" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>Maquette</h3>
+        <img src="assets/images/ex1/num2.gif" alt="" />
+        <p class="close">Cliquez à l'extérieur pour fermer la fenêtre</p>
+    </div>
+</dialog>
+<dialog id="num03-maquette">
+    <a href="#num03" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>Maquette</h3>
+        <img src="assets/images/ex1/num3.gif" alt="" />
+        <p class="close">Cliquez à l'extérieur pour fermer la fenêtre</p>
+    </div>
+</dialog>
+<dialog id="num04-maquette">
+    <a href="#num04" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>Maquette</h3>
+        <img src="assets/images/ex1/num4.gif" alt="" />
+        <p class="close">Cliquez à l'extérieur pour fermer la fenêtre</p>
+    </div>
+</dialog>
+
+<dialog id="num01-explication">
+    <a href="#num01" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>HTML</h3>
+        <p>
+            La structure HTML est déjà fournie. Veuillez prendre le temps de regarder et d'analyser le fichier
+            <strong>partials/ex1/_num1.html.</strong>
+        </p>
+
+        <h3>État de survol</h3>
+        <p>
+            Avant d'aller trop loin dans l'effet de survol qu'on veut créer. Nous allons faire l'état de survol sans avoir à faire le survol avec la souris. Une
+            fois qu'on sera satisfait on l'ajoutera à l'
+            <em>hover</em>
+            de notre lien
+        </p>
+        <p>
+            ⚠️ Un retour sur les pseudo-éléments sera nécessaire pour bien réussir ce numéro.
+            <a href="https://www.codeur.com/tuto/css/pseudo-elements-after-before-css/" target="_blank">Cliquez-ici pour de l'info</a>
+        </p>
+        <h4>Nous allons créer une ligne sous le menu .link-item</h4>
+        <ul>
+            <li>Faire en sorte d'ajouter un pseudo-élément after ::after</li>
+            <li>Ajouter la couleur primaire à la ligne</li>
+            <li>Ajouter la propriété essentielle pour qu'un pseudo élément fonctionne</li>
+            <li>Ajouter une hauteur de 4px</li>
+            <li>Ajouter une largeur de 100%</li>
+        </ul>
+        <p>😵 La ligne ne devrait toujours pas apparaître. La mettre en display `block` devrait régler le problème</p>
+        <p>La ligne prend maintenant toutes l'espace de la section. C'est normal, il faut maintenant faire en sorte de la positionner sous le texte.</p>
+        <h4>Nous allons maintenant mettre la ligne dans le bas</h4>
+        <ul>
+            <li>Ajouter le bon position à votre after pour qu'il se place dans le bas à 0 et à gauche 0px</li>
+            <li>Faire en sorte que le point de référence de votre positionnement absolu soit .link-item</li>
+            <li>Ajouter sur .link-item du padding dans le bas de 4px pour distancer la ligne du texte</li>
+        </ul>
+
+        <h3>État caché</h3>
+        <p>
+            Nous avons créer l'état de survol, nous allons maintenant caché l'effet pour la faire apparaitre lors du survol. Pour cet effet, nous allons
+            descendre encore plus bas notre ligne.
+        </p>
+        <h4>Translation vers le bas</h4>
+        <p>
+            Ajouter une
+            <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform-function/translate" target="_blank">transformation</a>
+            qui permet de déplacer sur l'axe des Y de 100%. La ligne devrait descendre mais rester visible
+        </p>
+        <p>
+            Il faut cacher la ligne. Vous pouvez utiliser la boite de votre .link-item comme masque. Vous pouvez mettre un overflow: hidden; qui chachera tout
+            ce qui est a l'extérieur de la boite.
+        </p>
+        <p>Ajouter aussi le bon display pour pouvoir profiter du modèle de boite qu'un élément inline ne permet pas.</p>
+        <h3>Effet survol</h3>
+        <ul>
+            <li>Ajouter sur le "hover" la transformation inverse pour faire apparaitre la ligne</li>
+            <li>Ajouter une animation de .3s avec un ease-out seulement sur le transform</li>
+        </ul>
+    </div>
+</dialog>
+<dialog id="num02-explication">
+    <a href="#num02" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>HTML</h3>
+        <p>
+            La structure HTML est déjà fournie. Veuillez prendre le temps de regarder et d'analyser le fichier
+            <strong>partials/ex1/_num2.html.</strong>
+        </p>
+
+        <h3>État de survol</h3>
+        <p>
+            Avant d'aller trop loin dans l'effet de survol qu'on veut créer. Nous allons faire l'état de survol sans devoir à faire le survol avec la souris.
+            Une fois qu'on sera satisfait on l'ajoutera à l'
+            <em>hover</em>
+            de notre lien
+        </p>
+        <p>
+            ⚠️ Un retour sur les pseudo-éléments sera nécessaire pour bien réussir ce numéro.
+            <a href="https://www.codeur.com/tuto/css/pseudo-elements-after-before-css/" target="_blank">Cliquez-ici pour de l'info</a>
+        </p>
+        <h4>Nous allons créer un arrière plan au menu .link-item--bg</h4>
+        <ul>
+            <li>Faire en sorte d'ajouter un pseudo-élément ::before</li>
+            <li>Ajouter la couleur primaire au fond</li>
+            <li>Ajouter la propriété essentielle pour qu'un pseudo élément fonctionne</li>
+            <li>Ajouter une hauteur de 100%</li>
+            <li>Ajouter une largeur de 100%</li>
+        </ul>
+        <p>😵 Le background ne devrait pas apparaître. Mettre le before en display block pour qu'il apparaisse.</p>
+        <p>Il est maintenant par dessus votre texte. Changer l'ordre des couches de l'élément pour qu'il soit derrière le texte (-1)</p>
+        <p>Le bg prend maintenant toutes l'espace de la section. C'est normal, il faut maintenant faire en sorte de la positionner sous le texte.</p>
+        <ul>
+            <li>Ajouter le bon position à votre before pour qu'il se place dans le haut à 0 et à gauche 0</li>
+            <li>Faire en sorte que le point de référence de votre positionnement absolu soit .link-item</li>
+            <li>Ajouter sur .link-item du padding sur tous les côtés de 4px</li>
+        </ul>
+
+        <h3>État caché</h3>
+        <p>
+            Nous avons créer l'état de survol, nous allons maintenant caché l'effet pour la faire apparaitre lors du survol. Pour cet effet, nous allons caché
+            l'arrière plan avec une déformation de taille.
+        </p>
+        <h4>Déformation de taille</h4>
+        <ul>
+            <li>
+                Ajouter une
+                <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform-function/scale" target="_blank">transformation</a>
+                qui permet de étiré sur l'axe des Y à 0 .
+            </li>
+        </ul>
+        <p>L'arrière-plan ne devrait plus être visible.</p>
+        <h3>Effet survol</h3>
+        <ul>
+            <li>Ajouter sur le "hover" la transformation inverse pour faire apparaitre l'arrière plan</li>
+            <li>Ajouter une animation de .3s avec un ease-out seulement sur le transform</li>
+        </ul>
+    </div>
+</dialog>
+<dialog id="num03-explication">
+    <a href="#num03" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>HTML</h3>
+        <p>
+            La structure HTML est déjà fournie. Veuillez prendre le temps de regarder et d'analyser le fichier
+            <strong>partials/ex1/_num3.html.</strong>
+        </p>
+
+        <h3>Réutilisabilité et ajustement</h3>
+        <p>Nous avons ajouter une classe .link-item--underline-side à un .link-item--underline</p>
+
+        <p>Nous allons simplement modifier la transformation de la ligne pour changer l'effet d'animation, mais tout les styles de .link-item--underline</p>
+        <h4>Nous allons ajuster les styles sur .link-item--underline-side</h4>
+        <ul>
+            <li>Modifier la transformation du after pour une transformation qui permet de étiré sur l'axe des X pour l'ajuster à 0.</li>
+        </ul>
+        <h4>Nous allons ajuster les styles sur l'état de survol de .link-item--underline-side</h4>
+        <ul>
+            <li>Ajuster sur le "hover" la transformation inverse pour faire apparaitre la ligne</li>
+        </ul>
+    </div>
+</dialog>
+<dialog id="num04-explication">
+    <a href="#num04" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>HTML</h3>
+        <p>
+            La structure HTML est déjà fournie. Veuillez prendre le temps de regarder et d'analyser le fichier
+            <strong>partials/ex1/_num4.html.</strong>
+        </p>
+
+        <h3>Réutilisabilité et ajustement</h3>
+        <p>Nous avons ajouter une classe .link-item--underline-reverse à un .link-item--underline</p>
+
+        <p>Nous allons simplement modifier la transformation de la ligne pour changer l'effet d'animation, mais tout les styles de .link-item--underline</p>
+        <h4>Nous allons ajuster les styles sur .link-item--underline-side</h4>
+        <ul>
+            <li>Modifier la transformation du after pour une transformation qui permet de étiré sur l'axe des X pour l'ajuster à 0.</li>
+        </ul>
+        <h4>Nous allons ajuster les styles sur l'état de survol de .link-item--underline-side</h4>
+        <ul>
+            <li>Ajuster sur le "hover" la transformation inverse pour faire apparaitre la ligne</li>
+        </ul>
+        <p>
+            😵 Nous avons le même effet qu'au numéro 3. Il faut travailler avec
+            <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform-origin" target="_blank" rel="noopener noreferrer">
+                le point d'origine de la transformation
+            </a>
+            pour modifier l'effet
+        </p>
+        <h3>Sur l'état normal</h3>
+        <ul>
+            <li>Ajuster le transform origin pour left</li>
+        </ul>
+        <p>😍 L'animation devrait maintenant commencer de la gauche vers la droite et revenir vers la gauche</p>
+        <h3>Sur l'état de survol</h3>
+        <ul>
+            <li>
+                Vous pouvez changer le transform-orgine sur le hover pour que sa commence de la gauche et finisse vers la droite. Faite des essais pour y
+                arriver.
+            </li>
+        </ul>
+    </div>
+</dialog>

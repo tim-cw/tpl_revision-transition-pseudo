@@ -1,0 +1,27 @@
+/* ==========================================================================
+   buttons / components
+   ========================================================================== */
+
+.button {
+    background: var(--color-primary);
+    border: 3px solid var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+    padding: 10px 30px;
+    transition: 0.3s all ease-out;
+
+    &:hover {
+        color: var(--color-primary);
+        background: transparent;
+        text-decoration: none;
+    }
+
+    &.active {
+        background: var(--color-black);
+        border-color: var(--color-black);
+    }
+}
+
+/*
+   Vos CSS pour l'exercice #2
+   ========================================================================== */

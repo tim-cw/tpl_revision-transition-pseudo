@@ -1,0 +1,202 @@
+<dialog id="num01-maquette">
+    <a href="#num01" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>Résultat final</h3>
+        <video src="assets/images/ex3/num1.mp4" autoplay muted loop></video>
+        <p class="close">Cliquez à l'extérieur pour fermer la fenêtre</p>
+    </div>
+</dialog>
+
+<dialog id="num01-explication">
+    <a href="#num01" class="dialog__close"></a>
+    <div class="dialog__content">
+        <h3>HTML</h3>
+        <h4>partials/ex3/_num1.html</h4>
+        <p>
+            Regarder la structure HTML fourni. Le fait d'avoir un conteneur pour l'image et un autre pour le contenu nous permet plus de flexibilité au niveau
+            des animations. Pensez à toujours utiliser une structure du genre pour une carte avec image.
+        </p>
+        <h3>Le contenu</h3>
+        <ol>
+            <li>
+                Positionnez le `.card__container` en absolu de sorte à ce qu'il prenne tout l'espace disponible
+                <ul>
+                    <li>Absolu, top/left: 0, width/height: 100%</li>
+                </ul>
+            </li>
+            <li>
+                Vous devez mettre un position `relative` sur `.card` pour contraindre le `.card__content` qui est maintenant en absolu.
+                <ul>
+                    <li>Mettez aussi tout de suite un color: `white` sur `.card`</li>
+                </ul>
+            </li>
+            <li>
+                Le contenu est collé dans `.card__content`, ajoutez un `padding` de `20px`.
+                <ul>
+                    <li>
+                        Pensez à utiliser les variables de spacing pour avoir une uniformité dans les espacements, jettez un oeil dans `settings/spacing.scss`,
+                        il en existe un de 20px.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Vous devez espacer le `surtitle` et le `title` sur la carte.
+                <ul>
+                    <li>
+                        Dans `.card__content`
+                        <ul>
+                            <li>flex en direction column</li>
+                            <li>Mettez de `l'espace-entre` les éléments pour les repousser</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h3>Le surtitre</h3>
+        <p>
+            Vous allez maintenant créer un surtitre ou l'espace à droite du texte sera comblée par un trait (pseudo-element) qui va s'étendre jusqu'à
+            l'extrémité de la card
+        </p>
+        <ol>
+            <li>
+                Créez un style pour `.card__surtitle`
+                <ul>
+                    <li>typo, taille de `20px`, poids de `500` et letter-spacing de `.2em` et mettre en majuscule</li>
+                </ul>
+                <p>⚠️Trouvez-vous que le texte est illisible? Vous allez régler ça avec un pseudo-element dans `.card__media`</p>
+            </li>
+            <li>
+                Créez un sélecteur `.card__media` et à l'intérieur, imbriquez un `&::after` qui vous servira de trame pour foncir notre image.
+                <ul>
+                    <li>Ajoutez la propriété essentielle pour un pseudo-element</li>
+                    <li>
+                        Il doit couvrir tout l'espace :
+                        <ul>
+                            <li>position `absolute`, top/left: `0`, width/height: `100%</li>
+                            <li>mettez une couleur d'arrière-plan noire à 20% d'opacité</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>
+            Regardez en bas de l'image dans votre navigateur, le `&::after` dépasse un peu. Mettez un display `block` sur l'image dans votre sélecteur
+            `.card__media` afin de régler ce problème.
+        </p>
+        <h3>Retour à `.card__surtitle` et au trait que vous allez ajouter</h3>
+        <ol>
+            <li>
+                Créez un pseudo `&::after` dans `.card__surtitle`
+                <ul>
+                    <li>Ajoutez la propriété essentielle pour un pseudo-element</li>
+                    <li>arrière-plan `blanc`, hauteur de `2px` et largeur de `100%`, display `block`</li>
+                </ul>
+                <p>La ligne est sous le surtitre, vous devez la mettre à droite en utilisant du flex.</p>
+            </li>
+            <li>
+                Mettez du flex sur `.card__surtitle`.
+                <ul>
+                    <li>`align-items` pour la centrer verticalement avec le texte</li>
+                    <li>Mettez un espace de `20px` entre la ligne et le texte à l'aide de `gap: 20px;`</li>
+                    <li>Maintenant qu'on a mis du flex, le display `block` sur le `&::after` n'est plus nécessaire</li>
+                </ul>
+            </li>
+            <li>
+                La ligne doit aller jusqu'à l'extrêmité de le carte, mais le padding sur `.card__content` vous en empêche
+                <ul>
+                    <li>Mettez une marge négative à droite sur le `&::after` équivalente au padding que vous avez mis dans votre carte</li>
+                </ul>
+            </li>
+        </ol>
+        <h3>Le titre</h3>
+        <ol>
+            <li>
+                Créez un sélecteur `.card__title`
+                <ul>
+                    <li>couleur `white</li>
+                    <li>enlevez les marges pour qu'il soit collé sur le padding de la carte</li>
+                </ul>
+            </li>
+            <li>À l'intérieur du h2, on va ajouter l'icône de la flèche `arrow-right-square` à l'aide de la technique des icônes.</li>
+            <li>
+                Vous devez aligner l'icône toujours à droite, en bas dans le titre.
+                <ul>
+                    <li>Sur `.card__title`, display `flex`, align-items `flex-end`</li>
+                    <li>Pour espacer un peu l'icône du texte, ajoutez aussi `gap: 20px`</li>
+                </ul>
+            </li>
+        </ol>
+        <h3>L'image</h3>
+        <p>Vous allez préparer l'image dans le but de l'animer</p>
+        <ol>
+            <li>
+                Dans `.card__media`, vous aller faire grossir l'image sur le survol et faire en sorte qu'elle ne s'affiche pas a l'extérieur de la carte
+                <ul>
+                    <li>position `relative` et overflow `hidden`</li>
+                </ul>
+            </li>
+            <li>
+                Vous avez imbriquez un sélecteur img dans `.card__media`, dans le but de fixer l'image pour l'animer, ajoutez-y :
+                <ul>
+                    <li>width/height `100%`, object-fit `cover`</li>
+                </ul>
+            </li>
+            <li>
+                Vous devez changer le ratio de la carte pour qu'elle soit un peu moins haute.
+                <ul>
+                    <li>
+                        Toujours dans `img` sous `.card__media` :
+                        <ul>
+                            <li>Afin de forcer un ratio constant à l'image, on va ajouter la déclaration : `aspect-ratio: 3/4;`</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h3>L'animation</h3>
+        <ol>
+            <li>
+                Vous devez faire grossir l'image lors d'un survol de la souris.
+                <ul>
+                    <li>Dans `.card`, ajoutez un sélecteur `&:hover .card__media img{}` et faire grossir légèrement l'image avec `transform: scale(1.1);`</li>
+                </ul>
+                <p>Passez votre souris sur la carte, c'est un peu sec. Ajoutez une transition.</p>
+            </li>
+            <li>
+                Dans le sélecteur `img` de `.card__media` :
+                <ul>
+                    <li>Ajoutez `transition: transform 0.6s ease-in-out;` afin de créer une transition entre le scale de 1 à 1.1</li>
+                    <p>Maintenant, sur le survol de la carte, il faut diminuer l'opacité de notre trame noire pour mieux voir l'image</p>
+                </ul>
+            </li>
+            <li>
+                Dans `.card`, ajoutez un sélecteur `&:hover .card__media::after {}` où il faut diminuer la valeur de l'alpha de l'arrière-plan `background:
+                rgba(0, 0, 0, 0.2);`
+                <ul>
+                    <li>Passez votre souris sur la carte, c'est un peu sec. Ajoutez une transition.</li>
+                </ul>
+            </li>
+            <li>
+                Dans le sélecteur `&::after` de `.card__media` :
+                <ul>
+                    <li>Ajoutez `transition: background 0.6s ease-in-out;` afin de créer une transition entre le scale de 1 à 1.1</li>
+                </ul>
+                <p>Finalement, il faut faire bouger l'icône vers la droite, toujours au survol.</p>
+            </li>
+            <li>
+                Dans `.card`, ajoutez un sélecteur `&:hover .card__title .icon` où il faut diminuer la valeur de l'alpha de notre arrière-plan `background:
+                rgba(0, 0, 0, 0.2);`
+                <ul>
+                    <li>Passez votre souris sur la carte, c'est un peu sec. Ajoutons une transition.</li>
+                </ul>
+            </li>
+            <li>
+                Dans le sélecteur `&::after` de `.card__media` :
+                <ul>
+                    <li>Bon, c'est encore sec non? Où devrait-on mettre la dernière transition pour que ça soit plus smooth?</li>
+                </ul>
+            </li>
+            <li>À vous de choisir</li>
+        </ol>
+    </div>
+</dialog>

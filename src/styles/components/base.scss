@@ -1,0 +1,56 @@
+/* ==========================================================================
+   base / Components
+   ===================== NE PAS MODIFIER LES STYLES ICI =====================
+   ========================================================================== */
+
+.base {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: #{typo(18px, 24px)};
+    h1 {
+        font-size: #{typo(32px, 48px)};
+        margin-bottom: 30px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: var(--color-primary);
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease-out;
+        }
+
+        &:hover {
+            &:before {
+                transform: rotate(0);
+            }
+            a {
+                transform: translate3D(5px, 0, 0);
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease-out;
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
