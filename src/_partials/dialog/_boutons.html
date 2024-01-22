@@ -15,44 +15,98 @@
             La structure HTML est déjà fournie. Veuillez prendre le temps de regarder et d'analyser le fichier
             <strong>partials/ex2/_num1.html.</strong>
         </p>
-        <h3>Configuration de base sur .button-anim</h3>
+        <h3>
+            Configuration de base sur
+            <em>.button-anim</em>
+        </h3>
         <ul>
-            <li>Ajouter une bordure verte de 2px</li>
-            <li>Ajuster le padding pour 20px à gauche et à droite et 5px en haut et en bas</li>
+            <li>
+                Ajouter une
+                <em>bordure</em>
+                <strong>verte</strong>
+                de
+                <strong>2px</strong>
+            </li>
+            <li>
+                Ajuster le
+                <em>padding</em>
+                pour
+                <strong>20px à gauche et à droite</strong>
+                et
+                <strong>5px en haut et en bas</strong>
+            </li>
         </ul>
         <h3>État de survol</h3>
         <p>
-            Avant d'aller trop loin dans l'effet de survol qu'on veut créer. Nous allons faire l'état de survol sans avoir à faire le survol avec la souris. Une
-            fois qu'on sera satisfait on l'ajoutera à l'
-            <em>hover</em>
-            de notre bouton
+            Avant d'aller trop loin dans l'effet de survol qu'on veut créer. Nous allons le faire sans utiliser la
+            <em>pseudo-classe :hover</em>
+            . Ça nous permettra de voir ce qui se passe sans avoir à passer la souris par dessus. Une fois qu'on sera satisfait on l'ajoutera à la
+            <em>pseudo-classe</em>
+            de notre bouton.
         </p>
         <ul>
-            <li>Répéter les étapes du link-item-bg de l'exercice 1 pour ajouter une masse --color-bg-secondary derrière votre texte</li>
+            <li>
+                Répéter les étapes de
+                <em>.link-item-bg</em>
+                de l'exercice 1 pour ajouter une masse avec la
+                <strong>couleur</strong>
+                <strong>--color-bg-secondary</strong>
+                derrière votre texte
+            </li>
         </ul>
 
         <h3>État caché</h3>
         <p>
-            Nous avons créer l'état de survol, nous allons maintenant caché l'effet pour la faire apparaitre lors du survol. Pour cet effet, nous allons
+            Maintenant que nous avons créé l'état de survol, il faut cacher l'effet pour la faire apparaitre lors du survol. Pour cet effet, nous allons
             descendre encore plus bas notre ligne.
         </p>
         <h4>Translation vers la gauche</h4>
         <ul>
-            <li>Faire une transformation pour déplacer sur l'axes des X de toute la longueur et un skew de 45deg</li>
+            <li>
+                Faire une transformation pour déplacer sur l'
+                <strong>axes des X</strong>
+                de toute la
+                <u>longueur</u>
+                et un
+                <em>skew</em>
+                de
+                <strong>45deg</strong>
+            </li>
         </ul>
         <p>
-            ⚠️ Si vous avez faite une translation de -100%, vous verrez qu'on voit encore une coin de la masse blanche. Vous pouvez augmenter le pourcentage
-            pour la faire disparaitre complètement
+            ⚠️ Si vous avez faite une translation de -100%, vous verrez qu'on voit encore une coin de la masse blanche. Vous pouvez
+            <em>augmenter légèrement le pourcentage</em>
+            pour la faire disparaitre complètement.
         </p>
         <p>
-            Il faut cacher la masse. Vous pouvez utiliser la boite de votre .button-anim comme masque. Vous pouvez mettre un overflow: hidden; qui chachera tout
-            ce qui est a l'extérieur de la boite.
+            Il faut maintenant cacher la masse. Vous pouvez utiliser la boite de votre
+            <em>.button-anim</em>
+            comme masque. Vous pouvez mettre un
+            <strong>overflow: hidden;</strong>
+            qui chachera tout ce qui est a l'extérieur de la boite.
         </p>
-        <p>Ajouter aussi le bon display pour pouvoir profiter du modèle de boite qu'un élément inline ne permet pas.</p>
+        <p>
+            Ajouter aussi le bon
+            <em>display</em>
+            pour pouvoir profiter du modèle de boite qu'un élément inline ne permet pas.
+        </p>
         <h3>Effet survol</h3>
         <ul>
-            <li>Ajouter sur le "hover" la transformation inverse pour faire apparaitre la ligne</li>
-            <li>Ajouter une animation de .3s avec un ease-out seulement sur le transform</li>
+            <li>
+                Ajouter sur le
+                <em>hover</em>
+                la transformation inverse pour faire apparaitre la ligne.
+            </li>
+            <li>
+                Ajouter une
+                <em>transition</em>
+                de
+                <strong>.3s</strong>
+                avec un
+                <strong>ease-out</strong>
+                <u>seulement</u>
+                sur le transform
+            </li>
         </ul>
     </div>
 </dialog>
