@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>cw4 . révision transition et pseudo - Les cartes</title>
+        <title>CW4 - Transition et pseudo</title>
 
         <link rel="stylesheet" href="styles/main.css" />
         <script src="scripts/main.js" defer></script>
@@ -12,34 +12,15 @@
     <body>
         <section class="exercice">
             <div class="wrapper">
-                <h1>ex3. Les cartes</h1>
-                <p>
-                    <em>.card>.card__medias+.card__content</em>
-                    Cette structure nous l'avons vue souvent, mais nous la pratiquons encore une fois pour créer une carte qui mets en application beaucoup
-                    d'effet que nous avons vue et qui ajoute des pseudo éléments.
-                </p>
+                <h1>.:: Carte</h1>
 
-                <section class="number" id="num1">
+                <section class="number">
                     <div class="number__header">
-                        <h2>
-                            numéro 1 -
-                            <span>Les cartes</span>
-                        </h2>
-                        <p>
-                            La carte (cards) est une composante qui peut visuellement être très intéressante pour regrouper un « extrait » de contenu de façon
-                            logique. Une carte est généralement un élément cliquable qui nous emmène sur une autre page ou déclanche une action afin d'afficher
-                            de l'information complémentaire. Nous allons donc la rendre cliquable et visuellement intéressante.
-                        </p>
-                        <h3>Instructions</h3>
-                        <div class="instructions">
-                            <a href="#num01-maquette" class="button--instruction">résultat final</a>
-                            <a href="#num01-explication" class="button--instruction">fiche technique</a>
-                        </div>
+                        <h2>04 - Carte survol</h2>
                     </div>
-                    <div class="number__content">{% include "_partials/ex3/_num1.html" %}</div>
+                    <div class="number__content">{% include "_partials/_ex04.html" %}</div>
                 </section>
             </div>
         </section>
-        {% include "_partials/dialog/_card.html" %}
     </body>
 </html>
