@@ -1,3 +1,29 @@
 /*
-   Vos CSS pour l'exercice #1
+   Vos CSS pour l'exercice #1 et #2
    ========================================================================== */
+
+.link-bg {
+    position: relative;
+    padding: 5px;
+
+    &::before {
+        content: '';
+        background: var(--color-primary);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: scaleY(0);
+        transition: 0.3s all ease-out;
+    }
+
+    &:hover {
+        color: var(--color-white);
+
+        &::before {
+            transform: scale(1);
+        }
+    }
+}
