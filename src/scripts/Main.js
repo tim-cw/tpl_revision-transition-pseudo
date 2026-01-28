@@ -1,4 +1,4 @@
-import Icons from "./utils/Icons.js";
+import Icons from './utils/Icons.js';
 
 class Main {
   constructor() {
